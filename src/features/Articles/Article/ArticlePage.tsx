@@ -3,7 +3,6 @@ import useArticleQuery from './api'
 import {getRandomInt} from "@/common/utils/helpers"
 import Comments from './Comments'
 
-
 const ArticlePage = () => {
 	const p = useParams()
 
@@ -12,10 +11,11 @@ const ArticlePage = () => {
 	if (isLoading) {
 		return <div>loading...</div>
 	}
-	
+
 	return (
 		<div>
-			<h1 className="text-3xl p-8">{data?.title}</h1>
+			{/* TODO remove optional chaining, fix public path for images */}
+			<h1 data-testid="title" className="text-3xl p-8">{data?.title}</h1>
 			<img src={`../artcover${getRandomInt(4)}.jpeg`}  className="bg-cover p-8 max-h-[700px]"/>
 
 			<p className="text-2xl p-8 max-w-screen-md">

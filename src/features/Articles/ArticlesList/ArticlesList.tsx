@@ -4,8 +4,6 @@ import ArticleCard  from '../Article/ArticleCard'
 const ArticlesList = () => {
 	const {data, isError} = useArticlesQuery()
 
-	console.log('articles', data)
-
 	if (isError) {
 		return <div>error, try later...</div>
 	}

@@ -40,7 +40,7 @@ const Comments = ({articleId}: Props) => {
 			<p className="text-xl mb-4">Comments</p>
 
 			{comments.length ? (
-				<div className="border-b-2 mb-4">
+				<div className="border-b-2 mb-4" data-testid='comments'>
 					{comments.map(c => (
 						<div key={c.time} className="mb-4">
 							{c.by}: {c.text}
@@ -52,8 +52,8 @@ const Comments = ({articleId}: Props) => {
 
 			<form onSubmit={onSubmit} className="max-w-[500px]">
 				<label htmlFor="by" className="cursor-pointer block text-md">Your name:</label>
-				<Input id="by" name="by" placeholder="your name:"  className="w-full border-2 mt-2 max-w-[300px] border-gray-700 block text-md px-4 py-3 mb-8"/>
-				<textarea id='text' name="text" placeholder="comment" className="border-2 w-full resize max-w-full border-gray-700 text-2xl px-4 py-3 mb-4"/>
+				<Input id="by" name="by" aria-label="by" placeholder="your name:"  className="w-full border-2 mt-2 max-w-[300px] border-gray-700 block text-md px-4 py-3 mb-8"/>
+				<textarea id='text' name="text" aria-label="text" placeholder="comment" className="border-2 w-full resize max-w-full border-gray-700 text-2xl px-4 py-3 mb-4"/>
 				<Button className="block border-2 p-2 ml-auto" type="submit">add comment</Button>
 			</form>
     </div>
