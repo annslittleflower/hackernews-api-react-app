@@ -1,16 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import {BEST_STORIES_API, GET_ITEM_FROM_API} from '@/common/config/api'
+import { Articles } from '@/common/types/articles';
 
-export type Articles = number[]
-
-export type Article = {
-  by: string
-  descendants: number,
-  id: number,
-  time: number,
-  title: string,
-  url: string
-}
 
 const useArticlesQuery = () => {
   const result = useQuery({

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Root from "./routes/Root";
+import Article from './routes/Article';
 import ErrorPage from "./routes/ErrorPage";
 import './index.css'
 
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "articles/:articleId",
-    element: <div>article id</div>,
+    element: <Article />,
   },
 ]);
 

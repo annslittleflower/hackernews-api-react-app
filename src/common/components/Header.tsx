@@ -3,7 +3,7 @@ import Logo from '@/assets/Logo.png'
 
 const Header = () => {
 	return (
-		<header className="border-b-2 min-h-20 mb-4 px-8 sticky top-0 bg-white flex items-center justify-between">
+		<header className="border-b-2 min-h-20 px-8 sticky top-0 bg-white flex items-center justify-between">
 			<Link to='/'>
 				<img src={Logo} />
 			</Link>

@@ -5,7 +5,9 @@ const Root = () => {
   return (
     <>
       <Header />
-      <ArticlesList />
+      <div className="bg-gray-100">
+        <ArticlesList />
+      </div>
       <FindOutBlock />
       <Footer />
     </>
