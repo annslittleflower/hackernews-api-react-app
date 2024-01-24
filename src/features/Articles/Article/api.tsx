@@ -12,7 +12,7 @@ const useArticleQuery = (id: number) => {
         throw new Error('something is wrong, try again later');
       }
 
-      const articleData = (await response.json()) as Article;
+      const articleData: Article = (await response.json());
 
       return articleData;
     },
