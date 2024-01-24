@@ -1,6 +1,12 @@
 # hackernews-api-react-app
 
-## todo
+## local install
 
+`nvm use`
 
-Write unit tests for your application
+node version must be `20.11.0`
+
+`npm i`
+
+`npm run dev`
+
